@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Book Assistant Editor</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="editor.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <h1>AI Book Assistant</h1>
+  <div id="creditsDisplay"></div>
+  <textarea id="inputText" placeholder="Paste your text here..." rows="10" cols="80"></textarea><br>
+  <button onclick="processText('proofread')">Proofread</button>
+  <button onclick="processText('format')">Format</button>
+  <button onclick="processText('check')">KDP Check</button>
+  <button onclick="buyCredits(1)">Buy 3000 words for $1</button>
+
+  <div id="outputArea" class="output two-column">
+    <div class="column">
+      <h4>Corrected Text</h4>
+      <div id="correctedText" class="highlighted-text"></div>
+    </div>
+    <div class="column">
+      <h4>Corrections Report</h4>
+      <pre id="correctionsReport"></pre>
+    </div>
+  </div>
+</body>
+</html>
